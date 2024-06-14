@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+nav {
+    background-color: #000000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding shadow */
+    padding: 10px 0;
+}
+
+nav .container {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    padding: 10px;
+}
+
+.logo img {
+    max-width: 150px; /* Set maximum width for the logo */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.header-text {
+    text-align: center;
+    font-size: 20px;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    background-image: url('background.jpg');
+    background-size: cover;
+    padding: 50px 0;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px; /* Limit maximum width of the form */
+    margin: 0 auto; /* Center the form horizontally */
+    box-sizing: border-box; /* Ensure padding is included in width calculations */
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"], select {
+    width: calc(100% - 16px); /* Adjust width to account for padding and border */
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+button {
+    background-color: #0064ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensure padding is included in width calculations */
+}
+
+button:hover {
+    background-color: #0037ff;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap; /* Prevent wrapping onto multiple lines */
+}
+
+.button-container button {
+    width: auto;
+    margin: 0 5px;
+}
+
+#copyButton {
+    background-color: #ffb414;
+}
+
+#copyButton:hover {
+    background-color: #ffa414;
+}
+
+.warning {
+    color: #ff2850; /* Tomato color */
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}
+
+/* CSS for the result box */
+.result {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    display: none;
+    max-width: 100%; /* Limit maximum width */
+    overflow-wrap: break-word; /* Enable word wrapping */
+    word-wrap: break-word; /* For legacy browser support */
+}
+
+.result p {
+    margin: 0;
+    word-break: break-all;
+    line-height: 1.5;
+}
+
+footer {
+    background-color: #000000;
+    padding: 20px 0;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
