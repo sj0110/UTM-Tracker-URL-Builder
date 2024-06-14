@@ -2,8 +2,8 @@
 const sourcesAndMediums = {
     "Google": ["App_Ad", "Carousal_Ad", "DemandGen_Ad", "Display_Ad", "Image_Ad", "PerformanceMax_Ad", "Search_Ad", "Shopping_Ad", "Smart_Ad", "Text_Ad", "Video_Ad"],
     "LinkedIn": ["Carousal_Ad", "Conversational_Ad", "Document_Ad", "Event_Ad", "Image_Ad", "InMail", "Spotlight_Ad", "Text_Ad", "Video_Ad"],
-    "Facebook": ["Carousal_Ads", "Image_Ads", "Text_Ad", "Video_Ad"],
-    "X": ["Carousal_Ads", "Image_Ads", "Text_Ad", "Video_Ad"],
+    "Facebook": ["Carousal_Ad", "Image_Ad", "Text_Ad", "Video_Ad"],
+    "X": ["Carousal_Ad", "Image_Ad", "Text_Ad", "Video_Ad"],
     "Email": ["ABM", "EDM", "Newsletter"],
     "Social_Media": ["Organic_Post"],
     "Content_Syndication": ["Case_Study", "Folloze", "Hubilo", "WhitePaper"],
