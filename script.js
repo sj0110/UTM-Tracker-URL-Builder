@@ -1,13 +1,13 @@
 // Sample data for Campaign Source and Mediums
 const sourcesAndMediums = {
-    "Google": ["Text_Ad", "Image_Ads", "Carousal_Ads", "Video_Ad"],
-    "LinkedIn": ["Text_Ad", "InMail", "Image_Ads", "Carousal_Ads", "Video_Ad"],
-    "Facebook": ["Text_Ad", "Image_Ads", "Carousal_Ads", "Video_Ad"],
-    "Email": ["Outbound", "Nurture", "Event", "Webinar", "ABM"],
+    "Google": ["App_Ad", "Carousal_Ad", "DemandGen_Ad", "Display_Ad", "Image_Ad", "PerformanceMax_Ad", "Search_Ad", "Shopping_Ad", "Smart_Ad", "Text_Ad", "Video_Ad"],
+    "LinkedIn": ["Carousal_Ad", "Conversational_Ad", "Document_Ad", "Event_Ad", "Image_Ad", "InMail", "Spotlight_Ad", "Text_Ad", "Video_Ad"],
+    "Facebook": ["Carousal_Ads", "Image_Ads", "Text_Ad", "Video_Ad"],
+    "X": ["Carousal_Ads", "Image_Ads", "Text_Ad", "Video_Ad"],
+    "Email": ["ABM", "EDM", "Newsletter"],
     "Social_Media": ["Organic_Post"],
-    "Content_Syndication": ["Folloze", "Hubilo", "WhitePaper", "Case_Study", "ABM"],
-    "Event": ["Fireside_Chat", "Round_Table", "Roadshow", "Webinar", "One_to_One_Connect"],
-    "Webinar": ["Live", "On_Demand"]
+    "Content_Syndication": ["Case_Study", "Folloze", "Hubilo", "WhitePaper"],
+    "Event": ["Fireside_Chat", "One_to_One_Connect", "Roadshow", "Round_Table", "Webinar"]
 };
 
 function updateMediumOptions() {
