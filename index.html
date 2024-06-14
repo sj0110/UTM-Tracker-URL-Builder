@@ -86,11 +86,14 @@
                 <div class="button-container">
                     <button type="button" onclick="generateURL()">Generate URL</button>
                     <button type="button" id="copyButton" onclick="copyURL()" style="display: none;">Copy URL</button>
+                    <button type="button" id="shortenButton" onclick="shortenURL()" style="display: none;">Shorten URL</button>
+                    <button type="button" id="copyShortButton" onclick="copyShortURL()" style="display: none;">Copy Shortened URL</button>
                 </div>
                 <div id="warningMessage" class="warning" style="display: none;"></div>
             </form>
 
             <div id="result" class="result" style="display: none;"></div>
+            <div id="shortResult" class="result" style="display: none;"></div>
 
         </div>
     </main>
