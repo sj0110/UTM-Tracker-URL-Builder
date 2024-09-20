@@ -24,7 +24,8 @@
         <div class="container">
             <form id="utmForm">
                 <label for="url">URL (http://...)*</label>
-                <input type="text" id="url" name="url" placeholder="Enter URL in the specified format"><br><br>
+                <input type="text" id="url" name="url" placeholder="Enter URL in the specified format">
+                <small>The full website URL (e.g. https://www.example.com or https://www.example.com)</small><br><br>
                 
                 <label for="campaignSource">Campaign Source*</label>
                 <select id="campaignSource" name="campaignSource" onchange="updateMediumOptions()">
@@ -39,23 +40,28 @@
                     <option value="Content_Syndication">Content Syndication</option>
                     <option value="Other">Other</option>
                 </select>
-                <input type="text" id="otherSource" name="otherSource" style="display: none;" placeholder="Enter Other Source"><br><br>
+                <input type="text" id="otherSource" name="otherSource" style="display: none;" placeholder="Enter Other Source">
+                <small>The referrer (e.g. google, newsletter)</small><br><br>
 
                 <label for="campaignMedium">Campaign Medium*</label>
                 <select id="campaignMedium" name="campaignMedium" disabled>
                     <option value="Other">Other</option>
                     <option value="" disabled selected>Select Campaign Source First</option>
                 </select>
-                <input type="text" id="otherMedium" name="otherMedium" style="display: none;" placeholder="Enter Other Medium"><br><br>
+                <input type="text" id="otherMedium" name="otherMedium" style="display: none;" placeholder="Enter Other Medium">
+                <small>Marketing medium (e.g. cpc, banner, email)</small><br><br>
 
                 <label for="campaignName">Campaign Name*<br>(YYYY_MMM_Partner/Practice_Region_Event Name_Mkt)*</label>
-                <input type="text" id="campaignName" name="campaignName" placeholder="Enter Campaign Name in the specified format"><br><br>
+                <input type="text" id="campaignName" name="campaignName" placeholder="Enter Campaign Name in the specified format">
+                <small>Enter campaign name (e.g. 2020_Jan_Google_SEA_Example_SMB)</small><br><br>
 
                 <label for="campaignTerm">Campaign Term</label>
-                <input type="text" id="campaignTerm" name="campaignTerm" placeholder="Enter Campaign Term"><br><br>
+                <input type="text" id="campaignTerm" name="campaignTerm" placeholder="Enter Campaign Term">
+                <small>Identify the paid keywords</small><br><br>
 
                 <label for="campaignContent">Campaign Content</label>
-                <input type="text" id="campaignContent" name="campaignContent" placeholder="Enter Campaign Content"><br><br>
+                <input type="text" id="campaignContent" name="campaignContent" placeholder="Enter Campaign Content">
+                <small>Use to differentiate ads or multiple links in a single ad (e.g. CTA1)</small><br><br>
 
                 <label for="region">Region*</label>
                 <select id="region" name="region" onchange="handleRegionChange()">
@@ -68,10 +74,12 @@
                     <option value="GLOBAL">GLOBAL</option>
                     <option value="Other">Other</option>
                 </select>
-                <input type="text" id="otherRegion" name="otherRegion" style="display: none;" placeholder="Enter Other Region"><br><br>
+                <input type="text" id="otherRegion" name="otherRegion" style="display: none;" placeholder="Enter Other Region">
+                <small>Select the geographical region of your campaign</small><br><br>
 
                 <label for="country">Country</label>
-                <input type="text" id="country" name="country" placeholder="Select the Region first" disabled><br><br>
+                <input type="text" id="country" name="country" placeholder="Select the Region first" disabled>
+                <small>Enter the country if applicable, separate with underscore if multiple (e.g. c1_c2) </small><br><br>
 
                 <label for="marketSegment">Market Segment*</label>
                 <select id="marketSegment" name="marketSegment" onchange="handleOtherSelection('marketSegment', 'otherMarketSegment')">
@@ -81,23 +89,27 @@
                     <option value="Enterprise">Enterprise</option>
                     <option value="Other">Other</option>
                 </select>
-                <input type="text" id="otherMarketSegment" name="otherMarketSegment" style="display: none;" placeholder="Enter Other Market Segment"><br><br>
+                <input type="text" id="otherMarketSegment" name="otherMarketSegment" style="display: none;" placeholder="Enter Other Market Segment">
+                <small>Select the market segment you are targeting</small><br><br>
 
                 <div class="button-container">
                     <button type="button" onclick="generateURL()">Generate URL</button>
                     <button type="button" id="copyButton" onclick="copyURL()" style="display: none;">Copy URL</button>
+                    <button type="button" id="shortenButton" onclick="shortenURL()" style="display: none;">Shorten URL</button>
+                    <button type="button" id="copyShortButton" onclick="copyShortURL()" style="display: none;">Copy Shortened URL</button>
                 </div>
                 <div id="warningMessage" class="warning" style="display: none;"></div>
             </form>
 
             <div id="result" class="result" style="display: none;"></div>
+            <div id="shortResult" class="result" style="display: none;"></div>
 
         </div>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Searce Technologies. All rights reserved.</p>
+            <p>© 2024 Searce Technologies. All rights reserved.</p>
         </div>
     </footer>
 

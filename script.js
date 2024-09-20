@@ -213,7 +213,51 @@ function generateURL() {
 
     // Show copy button only when URL is generated successfully
     document.getElementById("copyButton").style.display = "block";
+    document.getElementById("shortenButton").style.display = "block";
     document.getElementById("warningMessage").style.display = "none";
+}
+
+function shortenURL() {
+    const longURL = document.getElementById("result").innerText;
+    const apiUrl = `https://api-ssl.bitly.com/v4/shorten`;
+
+    const accessToken = "2a5e0b6ab0a2fef58d31db49cfd5bc9575fd7378"; // Replace this with your actual Bitly access token
+
+    fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${accessToken}`
+        },
+        body: JSON.stringify({ long_url: longURL })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.link) {
+            const shortURL = data.link;
+            document.getElementById("shortResult").innerText = shortURL;
+            document.getElementById("shortResult").style.display = "block";
+            document.getElementById("copyShortButton").style.display = "block";
+        } else {
+            document.getElementById("warningMessage").innerText = "Failed to shorten the URL. Please try again.";
+            document.getElementById("warningMessage").style.display = "block";
+        }
+    })
+    .catch(error => {
+        document.getElementById("warningMessage").innerText = "An error occurred. Please try again.";
+        document.getElementById("warningMessage").style.display = "block";
+    });
+}
+
+function copyShortURL() {
+    const shortUrlElement = document.getElementById("shortResult");
+    const range = document.createRange();
+    range.selectNode(shortUrlElement);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+    document.execCommand("copy");
+    window.getSelection().removeAllRanges();
+    alert("Shortened URL copied to clipboard!");
 }
 
 
@@ -263,6 +307,7 @@ function handleOtherSelection(selectId, otherInputId) {
 handleOtherSelection("campaignSource", "otherSource");
 handleOtherSelection("campaignMedium", "otherMedium");
 handleOtherSelection("region", "otherRegion");
+handleOtherSelection("marketSegment", "otherMarketSegment");
 
 // Initialize medium options on page load
 updateMediumOptions();

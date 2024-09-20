@@ -16,7 +16,7 @@ header {
 
 nav {
     background-color: #000000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding shadow */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 10px 0;
 }
 
@@ -30,8 +30,8 @@ nav .container {
 }
 
 .logo img {
-    max-width: 150px; /* Set maximum width for the logo */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 150px;
+    height: auto;
 }
 
 .header-text {
@@ -55,9 +55,9 @@ form {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 500px; /* Limit maximum width of the form */
-    margin: 0 auto; /* Center the form horizontally */
-    box-sizing: border-box; /* Ensure padding is included in width calculations */
+    max-width: 500px;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 label {
@@ -67,12 +67,19 @@ label {
 }
 
 input[type="text"], select {
-    width: calc(100% - 16px); /* Adjust width to account for padding and border */
+    width: calc(100% - 16px);
     padding: 8px;
-    margin-bottom: 15px;
+    margin-bottom: 5px; /* Reduced margin to align with small tag */
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box; /* Include padding and border in the element's total width */
+    box-sizing: border-box;
+}
+
+small {
+    display: block;
+    margin: 0px 0 0px 5px; /* Add left margin for inward positioning */
+    color: #000000;
+    font-size: 12px; /* Slightly smaller font size for better distinction */
 }
 
 button {
@@ -82,7 +89,7 @@ button {
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    box-sizing: border-box; /* Ensure padding is included in width calculations */
+    box-sizing: border-box;
 }
 
 button:hover {
@@ -93,7 +100,7 @@ button:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: nowrap; /* Prevent wrapping onto multiple lines */
+    flex-wrap: nowrap;
 }
 
 .button-container button {
@@ -109,14 +116,21 @@ button:hover {
     background-color: #ffa414;
 }
 
+#copyShortButton {
+    background-color: #ffb414;
+}
+
+#copyShortButton:hover {
+    background-color: #ffa414;
+}
+
 .warning {
-    color: #ff2850; /* Tomato color */
+    color: #ff2850;
     font-size: 14px;
     margin-top: 10px;
     display: none;
 }
 
-/* CSS for the result box */
 .result {
     margin-top: 20px;
     padding: 20px;
@@ -124,9 +138,9 @@ button:hover {
     border-radius: 5px;
     background-color: #f9f9f9;
     display: none;
-    max-width: 100%; /* Limit maximum width */
-    overflow-wrap: break-word; /* Enable word wrapping */
-    word-wrap: break-word; /* For legacy browser support */
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .result p {
